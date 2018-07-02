@@ -1,4 +1,5 @@
 'use strict'
+// 开发信息配置
 const merge = require('webpack-merge')
 const prodEnv = require('./prod.env')
 

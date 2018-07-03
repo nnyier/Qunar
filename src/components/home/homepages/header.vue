@@ -1,0 +1,62 @@
+<template>
+    <div class="home-header">
+        <div class="header-left">
+            <div class="iconfont back-icon">&#xe624;</div>
+        </div>
+        <div class="header-input">
+            <i class="iconfont">&#xe632;</i>输入城市/景点/游玩主题</div>
+        <div class="header-right">城市
+            <i class="iconfont arrow-down-icon">&#xe623;</i>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+  name: "HomeHeader"
+};
+</script>
+
+<style lang="stylus" scoped>
+@import '../../../common/css/variables.styl'
+// 1rem = html font-size 50px(2倍图)
+.home-header {
+    background: $bg-color;
+    line-height: 0.86rem;
+    display: flex;
+    color: #fff;
+
+    .header-left {
+        height: 0.64rem;
+        float: left;
+
+        .back-icon {
+            font-size: 0.4rem;
+        }
+    }
+
+    .header-input {
+        flex: 1;
+        background: #fff;
+        border-radius: 0.1rem;
+        margin-top: 0.12rem;
+        margin-left: 0.2rem;
+        padding-left: 0.4rem;
+        height: 0.64rem;
+        line-height: 0.64rem;
+        color: #ccc;
+    }
+
+    .header-right {
+        width: 1.24rem;
+        float: right;
+        text-align: center;
+
+        .arrow-down-icon {
+            margin-left: -0.1rem;
+            font-size: 0.4rem;
+            line-height: 0.64rem;
+        }
+    }
+}
+</style>

@@ -1,19 +1,24 @@
 <template>
   <div class="home">
     <home-header></home-header>
-    hello HelloWorld
+    <home-swiper></home-swiper>
+    <div>
+      test
+    </div>
   </div>
 </template>
 
 <script>
 import HomeHeader from "./homepages/header";
+import HomeSwiper from "./homepages/swiper";
 export default {
   name: "Home",
   data() {
     return {};
   },
   components: {
-    HomeHeader
+    HomeHeader,
+    HomeSwiper
   }
 };
 </script>

@@ -8,10 +8,13 @@ import '../src/common/css/reset.css'
 // 解决移动端1px边框问题(多倍屏下，1px会被渲染为多px)
 import '../src/common/css/border.css'
 import '../src/common/css/iconfont.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 // 解决移动端点击延迟300ms
 fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({

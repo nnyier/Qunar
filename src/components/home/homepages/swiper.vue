@@ -66,7 +66,7 @@ export default {
 }
 
 .wrapper {
-    // 保持高宽比始终31.25%
+    // 保持高宽比始终26.7%
     overflow: hidden;
     width: 100%;
     height: 0;

@@ -1,17 +1,17 @@
 <template>
-    <div class="icons">
-        <swiper :options="swiperOption">
-            <swiper-slide v-for="(page,index) of pages" :key="index">
-                <div class="icon" v-for="item of page" :key="item.id">
-                    <div class="icon-img">
-                        <img class="icon-img-content" :src="item.imgUrl" alt="" srcset="">
-                    </div>
-                    <p class="icon-desc">{{item.desc}}</p>
-                </div>
-            </swiper-slide>
-            <!-- <div class="swiper-pagination" slot="pagination"></div> -->
-        </swiper>
-    </div>
+  <div class="icons">
+    <swiper :options="swiperOption">
+      <swiper-slide v-for="(page,index) of pages" :key="index">
+        <div class="icon" v-for="item of page" :key="item.id">
+          <div class="icon-img">
+            <img class="icon-img-content" :src="item.imgUrl" alt="" srcset="">
+          </div>
+          <p class="icon-desc">{{item.desc}}</p>
+        </div>
+      </swiper-slide>
+      <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+    </swiper>
+  </div>
 </template>
 
 <script>
@@ -116,13 +116,16 @@ export default {
 // background: green !important;
 // }
 .icons>>>.swiper-container {
-    width: 100%;
-    height: 0;
-    padding-bottom: 50%;
-    overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  overflow: hidden;
 }
 
-.icon {
+.icons {
+  margin-top: 0.1rem;
+
+  .icon {
     position: relative;
     float: left;
     width: 25%;
@@ -130,33 +133,34 @@ export default {
     padding-bottom: 25%;
 
     .icon-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0.44rem;
-        box-sizing: border-box;
-        padding: 0.1rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0.44rem;
+      box-sizing: border-box;
+      padding: 0.1rem;
 
-        .icon-img-content {
-            height: 100%;
-            display: block;
-            margin: 0 auto;
-            height: 100%;
-        }
+      .icon-img-content {
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        height: 100%;
+      }
     }
 
     .icon-desc {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        line-height: 0.44rem;
-        height: 0.44rem;
-        color: $dark-text-color;
-        text-align: center;
-        // ...省略
-        ellipsis();
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      line-height: 0.44rem;
+      height: 0.44rem;
+      color: $dark-text-color;
+      text-align: center;
+      // ...省略
+      ellipsis();
     }
+  }
 }
 </style>

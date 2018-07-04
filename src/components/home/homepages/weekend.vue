@@ -1,6 +1,6 @@
 <template>
     <div class="recommend">
-        <div class="title">热销推荐</div>
+        <div class="title">周末去哪儿</div>
         <ul>
             <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
                 <div class="item-img-wrapper">
@@ -9,7 +9,6 @@
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
                     <p class="item-desc">{{item.desc}}</p>
-                    <button class="item-button">查看详情</button>
                 </div>
             </li>
         </ul>
@@ -18,35 +17,35 @@
 
 <script>
 export default {
-  name: "HomeRecommend",
+  name: "HomeWeekend",
   data() {
     return {
       recommendList: [
         {
           id: "00001",
           imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
+            "http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg",
           title: "北京温泉排行榜",
           desc: "细数北京温泉，温暖你的冬天"
         },
         {
           id: "00002",
           imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
+            "http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg",
           title: "北京温泉排行榜",
           desc: "细数北京温泉，温暖你的冬天"
         },
         {
           id: "00003",
           imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
+            "http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg",
           title: "北京温泉排行榜",
           desc: "细数北京温泉，温暖你的冬天"
         },
         {
           id: "00004",
           imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
+            "http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg",
           title: "北京温泉排行榜",
           desc: "细数北京温泉，温暖你的冬天"
         }
@@ -60,47 +59,40 @@ export default {
 @import '../../../common/css/mixins.styl';
 
 .title {
+    height: 0.8rem;
+    padding-left: 0.26rem;
     line-height: 0.8rem;
-    background: #eeeeee;
-    text-indent: 0.2rem;
-    margin-top: 0.2rem;
+    color: #212121;
 }
 
 .item {
-    display: flex;
-    height: 1.9rem;
-    overflow: hidden;
+    .item-img-wrapper {
+        height: 0;
+        width: 100%;
+        padding-bottom: 33.9%;
+        overflow: hidden;
 
-    .item-img {
-        width: 1.7rem;
-        height: 1.7rem;
-        padding: 0.1rem;
+        .item-img {
+            width: 100%;
+        }
     }
 
     .item-info {
-        flex: 1;
         padding: 0.1rem;
-        min-width: 0;
 
         .item-title {
-            line-height: 0.54rem;
-            font-size: 0.32rem;
+            line-height: 0.48rem;
+            font-size: 0.28rem;
             color: #212121;
             ellipsis();
         }
 
         .item-desc {
-            line-height: 0.4rem;
+            line-height: 0.42rem;
+            font-size: 0.24rem;
+            padding-right: 1.4rem;
             color: #616161;
             ellipsis();
-        }
-
-        .item-button {
-            line-height: 0.44rem;
-            background: #ffac3b;
-            padding: 0 0.2rem;
-            border-radius: 0.06rem;
-            margin-top: 0.16rem;
         }
     }
 }

@@ -5,7 +5,7 @@
         </div>
         <div class="header-input">
             <i class="iconfont">&#xe632;</i>输入城市/景点/游玩主题</div>
-        <div class="header-right">城市
+        <div class="header-right">{{this.city}}
             <i class="iconfont arrow-down-icon">&#xe623;</i>
         </div>
     </div>
@@ -13,12 +13,16 @@
 
 <script>
 export default {
-  name: "HomeHeader"
+  name: "HomeHeader",
+  props: {
+    city: String
+  }
 };
 </script>
 
 <style lang="stylus" scoped>
-@import '../../../common/css/variables.styl'
+@import '../../../common/css/variables.styl';
+
 // 1rem = html font-size 50px(2倍图)
 .home-header {
     background: $bg-color;

@@ -1,0 +1,148 @@
+{
+  "ret": true,
+  "data": {
+    "city": "上海",
+    "swiperList": [{
+      "id": "0001",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1806/a1/e645466a5a1c9a02.jpg_750x200_9c489fbd.jpg"
+    }, {
+      "id": "0002",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/3b/ef86879aa50e3002.jpg_750x200_2a108508.jpg"
+    }, {
+      "id": "0003",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1806/f5/ea83238744f31102.jpg_750x200_73b8477c.jpg"
+    }, {
+      "id": "0004",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1806/ae/2f9a9f0bbc30e102.jpg_750x200_75b6a866.jpg"
+    }, {
+      "id": "0005",
+      "imgUrl": "http://img1.qunarzz.com/piao/fusion/1806/5f/171e04d556e40a02.jpg_750x200_424c4ddd.jpg"
+    }],
+    "iconList": [{
+        "id": "1001",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "景点门票"
+      },
+      {
+        "id": "1002",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+        "desc": "一日游"
+      },
+      {
+        "id": "1003",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "必游榜单"
+      },
+      {
+        "id": "1004",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+        "desc": "动植物园"
+      },
+      {
+        "id": "1005",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/6a/45f595250c73d102.png",
+        "desc": "夏日玩水"
+      },
+      {
+        "id": "1006",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/57/1e29afd06f881102.png",
+        "desc": "普陀山"
+      },
+      {
+        "id": "1007",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png",
+        "desc": "上海欢乐谷"
+      },
+      {
+        "id": "1008",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png",
+        "desc": "精选"
+      },
+      {
+        "id": "1009",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/de/f26be47a6bf02a02.png",
+        "desc": "上海迪士尼"
+      },
+      {
+        "id": "10010",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png",
+        "desc": "全部玩乐"
+      }
+    ],
+    "recommendList": [{
+      "id": "0001",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
+      "title": "上海玛雅海滩水公园",
+      "desc": "夏日水上乐园好去处",
+      "price": 140
+    }, {
+      "id": "0002",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1803/1a/1aac2b1dd96b36ba3.water.jpg_200x200_8148509f.jpg",
+      "title": "上海欢乐谷",
+      "desc": "让你的欢乐无时无刻",
+      "price": 95.1
+    }, {
+      "id": "0003",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg",
+      "title": "上海迪士尼乐园",
+      "desc": "国内第一个迪士尼乐园",
+      "price": 69
+    }, {
+      "id": "0004",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1603/17/170481fb9caf500790.water.jpg_200x200_a32b9a92.jpg",
+      "title": "上海野生动物园",
+      "desc": "亲近自然，亲近动物",
+      "price": 63
+    }, {
+      "id": "0005",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1412/9f/fbff2a5302c0ce906ef9b64159730f89.water.jpg_200x200_87806940.jpg",
+      "title": "上海海洋水族馆",
+      "desc": "在海底世界畅游翱翔",
+      "price": 103
+    }, {
+      "id": "0006",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1507/b3/b33a7caa457c0a52.img.jpg_200x200_fe73bd81.jpg",
+      "title": "上海中心大厦",
+      "desc": "超高层地标式摩天大楼",
+      "price": 135
+    }, {
+      "id": "0007",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1411/4f/146031f0bc5d7e0dd960d3f5bf0c9eca.water.jpg_200x200_f22705c9.jpg",
+      "title": "上海科技馆",
+      "desc": "感受科技的独特魅力",
+      "price": 57.8
+    }, {
+      "id": "0008",
+      "imgUrl": "http://img1.qunarzz.com/tuan/team2/1507/2c/83e0e0e7ae082a.jpg_200x200_6d7378b2.jpg",
+      "title": "东方明珠电视塔",
+      "desc": "上海地标性建筑",
+      "price": 128
+    }],
+    "weekendList": [{
+      "id": "0001",
+      "imgUrl": "http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg",
+      "title": "上海必游TOP10",
+      "desc": "中西合璧，现代和传统各有各的精彩"
+    }, {
+      "id": "0002",
+      "imgUrl": "http://img1.qunarzz.com/sight/source/1603/ad/69b0fc5f48ad5f.jpg_r_640x214_b0fd5c7b.jpg",
+      "title": "亲子时光TOP10",
+      "desc": "走进自然或玩转乐园，感知大千世界"
+    }, {
+      "id": "0003",
+      "imgUrl": "http://img1.qunarzz.com/sight/source/1511/1d/fe098e8cfec117.jpg_r_640x214_a9be292a.jpg",
+      "title": "上海城市观光",
+      "desc": "来这里寻找你所认识的上海"
+    }, {
+      "id": "0004",
+      "imgUrl": "http://img1.qunarzz.com/sight/source/1505/7b/2a6b0ce087f0e5.jpg_r_640x214_5c76b115.jpg",
+      "title": "情迷博物馆",
+      "desc": "穿梭时光岁月寻找答案"
+    }, {
+      "id": "0005",
+      "imgUrl": "http://img1.qunarzz.com/sight/source/1505/6f/2711e071838590.jpg_r_640x214_8f1ad9a1.jpg",
+      "title": "戏水清凉一夏",
+      "desc": "夏日戏水，玩“乐”无穷"
+    }]
+  }
+}

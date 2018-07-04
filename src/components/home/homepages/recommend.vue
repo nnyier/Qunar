@@ -2,56 +2,28 @@
     <div class="recommend">
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of recolist" :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src="item.imgUrl" alt="">
                 </div>
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
                     <p class="item-desc">{{item.desc}}</p>
-                    <button class="item-button">查看详情</button>
+                    <p class="item-price">
+                        <span class="item-color">￥</span>
+                        <strong class="item-color">{{item.price}}</strong>起</p>
                 </div>
             </li>
         </ul>
+        <a class="more" href="#">查看所有产品</a>
     </div>
 </template>
 
 <script>
 export default {
   name: "HomeRecommend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "00001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
-          title: "北京温泉排行榜",
-          desc: "细数北京温泉，温暖你的冬天"
-        },
-        {
-          id: "00002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
-          title: "北京温泉排行榜",
-          desc: "细数北京温泉，温暖你的冬天"
-        },
-        {
-          id: "00003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
-          title: "北京温泉排行榜",
-          desc: "细数北京温泉，温暖你的冬天"
-        },
-        {
-          id: "00004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg",
-          title: "北京温泉排行榜",
-          desc: "细数北京温泉，温暖你的冬天"
-        }
-      ]
-    };
+  props: {
+    recolist: Array
   }
 };
 </script>
@@ -83,25 +55,43 @@ export default {
         min-width: 0;
 
         .item-title {
-            line-height: 0.54rem;
-            font-size: 0.32rem;
+            height: 0.44rem;
             color: #212121;
+            font-size: 0.32rem;
+            line-height: 0.44rem;
             ellipsis();
         }
 
         .item-desc {
-            line-height: 0.4rem;
+            margin-top: 0.14rem;
             color: #616161;
+            font-size: 0.24rem;
+            line-height: 0.34rem;
+            text-indent: 0.1rem;
             ellipsis();
         }
 
-        .item-button {
-            line-height: 0.44rem;
-            background: #ffac3b;
-            padding: 0 0.2rem;
-            border-radius: 0.06rem;
-            margin-top: 0.16rem;
+        .item-price {
+            font-size: 0.24rem;
+            margin-top: 0.3rem;
+
+            strong {
+                font-size: 0.4rem;
+            }
+
+            .item-color {
+                color: #ff8300;
+            }
         }
     }
+}
+
+.more {
+    display: block;
+    padding: 0.2rem 0;
+    color: #00afc7;
+    font-size: 0.28rem;
+    line-height: 0.4rem;
+    text-align: center;
 }
 </style>

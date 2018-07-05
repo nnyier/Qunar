@@ -12,7 +12,4 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-// .inhome {
-//     position: relative;
-// }
 </style>

@@ -18,8 +18,8 @@ export default {
 @import '../../../common/css/mixins';
 
 .header {
-    height: $header-height;
-    line-height: $header-height;
+    height: $city-header-height;
+    line-height: $city-header-height;
     border-bottom: 0;
     position: relative;
     background: $bg-color;
@@ -33,8 +33,8 @@ export default {
         color: #ffffff;
         text-align: center;
         width: 0.8rem;
-        height: $header-height;
-        line-height: $header-height;
+        height: $city-header-height;
+        line-height: $city-header-height;
 
         .back-icon {
             font-size: 0.4rem;
@@ -43,7 +43,7 @@ export default {
 
     .title {
         margin: 0 1rem;
-        line-height: $header-height;
+        line-height: $city-header-height;
         font-size: 0.32rem;
         text-align: center;
         color: #fff;

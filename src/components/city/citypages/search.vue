@@ -14,9 +14,14 @@ export default {
 @import '../../../common/css/variables.styl';
 
 .city-search {
+    padding 0 0.2rem
+    position: absolute;
+    top: 1.48rem;
+    left: 0;
     height: 0.72rem;
     background: $bg-color;
-    padding: 0 0.1rem;
+    width: 100%;
+    box-sizing: border-box;
 
     .search-input {
         box-sizing: border-box;

@@ -10,22 +10,21 @@ Vue.use(Router)
 export default new Router({
   routes: [{
     path: '/',
-    name: 'Home',
     component: Home
   }, {
     path: '/city',
-    name: 'City',
     component: City,
     children: [{
+      path: '/',
+      redirect: 'inhome'
+    },
+    {
       path: 'inhome',
-      name: 'InHome',
       component: InHome
     },
     {
       path: 'outhome',
-      name: 'OutHome',
       component: OutHome
-    }
-    ]
+    }]
   }]
 })

@@ -5,9 +5,9 @@
         </div>
         <div class="header-input">
             <i class="iconfont">&#xe632;</i>输入城市/景点/游玩主题</div>
-        <div class="header-right">{{this.city}}
+        <router-link to="/city" tag="div" class="header-right">{{this.city}}
             <i class="iconfont arrow-down-icon">&#xe623;</i>
-        </div>
+        </router-link>
     </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
 // 1rem = html font-size 50px(2倍图)
 .home-header {
     background: $bg-color;
-    line-height: 0.86rem;
+    line-height: $header-height;
     display: flex;
     color: #fff;
 

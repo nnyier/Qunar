@@ -1,13 +1,19 @@
 <template>
     <div class="inhome">
-        inhome
+        <city-list></city-list>
+        <city-alphabet></city-alphabet>
     </div>
 </template>
 
 <script>
+import CityList from "./list";
+import CityAlphabet from "./alphabet";
 export default {
   name: "CityInhome",
-  components: {}
+  components: {
+    CityList,
+    CityAlphabet
+  }
 };
 </script>
 

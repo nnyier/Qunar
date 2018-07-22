@@ -31,7 +31,7 @@ export default {
     }
   },
   updated() {
-    //   页面渲染完成之后会出发这个钩子
+    //   页面渲染完成之后会触发这个钩子
     this.startY = this.$refs["A"][0].offsetTop;
   },
   methods: {

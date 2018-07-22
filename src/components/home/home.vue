@@ -43,7 +43,7 @@ export default {
         this.recommendList = resData.recommendList;
         this.weekendList = resData.weekendList;
       }
-      console.log(res);
+      // console.log(res);
     }
   },
   components: {

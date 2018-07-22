@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul class="list">
-            <li class="item" v-for="(item,key) of cities" :key="item.id">{{key}}</li>
+            <li class="item" v-for="item of letters" :ref="item" :key="item.id" @click="handleLetterClick" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">{{item}}</li>
         </ul>
     </div>
 
@@ -10,8 +10,52 @@
 <script>
 export default {
   name: "CityAlphabet",
+  data() {
+    return {
+      touchStatus: false
+    };
+  },
   props: {
     cities: Object
+  },
+  computed: {
+    letters() {
+      const letters = [];
+      for (let i in this.cities) {
+        letters.push(i);
+      }
+      return letters;
+      //   ["A","B","C",..."Z"]}
+    }
+  },
+  methods: {
+    handleLetterClick(e) {
+      this.$emit("change", e.target.innerText);
+      //   console.log(e.target.innerText);
+    },
+    handleTouchStart() {
+      this.touchStatus = true;
+    },
+    handleTouchMove(e) {
+      if (this.touchStatus) {
+        //   A距离列表顶部的距离
+        const startY = this.$refs["A"][0].offsetTop;
+        //   移动的位置距离页面顶部的距离
+        const touchesY = e.touches[0].clientY;
+        //  移动的位置距离列表顶部的距离
+        const touchY = touchesY - 64;
+        // 移动的位移
+        const offset = touchY - startY;
+        // 每一个字母的距离 行高20px
+        const index = Math.floor(offset / 20);
+        if (index >= 0 && index <= this.letters.length) {
+          this.$emit("change", this.letters[index]);
+        }
+      }
+    },
+    handleTouchEnd() {
+      this.touchStatus = false;
+    }
   }
 };
 </script>
@@ -31,6 +75,7 @@ export default {
     text-align: center;
 
     .item {
+        // 行高20px
         line-height: 0.4rem;
         text-align: center;
         color: $bg-color;

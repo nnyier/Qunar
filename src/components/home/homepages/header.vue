@@ -5,17 +5,24 @@
         </div>
         <div class="header-input">
             <i class="iconfont">&#xe632;</i>输入城市/景点/游玩主题</div>
-        <router-link to="/city" tag="div" class="header-right">{{this.$store.state.city}}
+        <router-link to="/city" tag="div" class="header-right">{{this.currentCity}}
             <i class="iconfont arrow-down-icon">&#xe623;</i>
         </router-link>
     </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "HomeHeader",
   props: {
     city: String
+  },
+  computed: {
+    //   将state的city映射到组件  即this.$store.state.city = this.currentCity
+    ...mapState({
+      currentCity: "city"
+    })
   }
 };
 </script>
@@ -52,7 +59,8 @@ export default {
     }
 
     .header-right {
-        width: 1.24rem;
+        min-width: 1.04rem;
+        padding: 0 0.1rem;
         float: right;
         text-align: center;
 

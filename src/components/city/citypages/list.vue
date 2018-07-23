@@ -14,7 +14,7 @@
                 <div class="title border-topbottom">当前城市</div>
                 <div class="button-list">
                     <div class="button-wrapper">
-                        <div class="button active">{{this.$store.state.city}}</div>
+                        <div class="button active">{{this.currentCity}}</div>
                     </div>
                 </div>
             </div>
@@ -38,6 +38,7 @@
 
 <script>
 import BScroll from "better-scroll";
+import { mapState, mapMutations } from "vuex";
 // import CitySearch from "./search";
 export default {
   name: "CityList",
@@ -46,6 +47,12 @@ export default {
     cities: Object,
     letter: String
   },
+  computed: {
+    //   将vuex的公用属性city映射到组件的计算属性里
+    ...mapState({
+      currentCity: "city"
+    })
+  },
   mounted() {
     this.$nextTick(() => {
       this.scroll = new BScroll(this.$refs.wrapper, {});
@@ -53,10 +60,14 @@ export default {
   },
   methods: {
     handleCityClick(city) {
-      this.$store.dispatch("changeCity", city);
+      this.changeCity(city);
+      //   this.$store.dispatch("changeCity", city);
       //   选择城市后跳转至首页
       this.$router.push("/");
-    }
+    },
+    // 将mutations里的changeCity映射到组件里的changeCity方法里
+    // this.$store.dispatch("changeCity", city) = this.changeCity(city)
+    ...mapMutations(["changeCity"])
   },
   watch: {
     letter() {

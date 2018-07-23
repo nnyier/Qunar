@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
+import store from './store'
 import '../src/common/css/reset.css'
 // 解决移动端1px边框问题(多倍屏下，1px会被渲染为多px)
 import '../src/common/css/border.css'
@@ -20,6 +21,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: {
     App
   },

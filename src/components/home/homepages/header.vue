@@ -5,7 +5,7 @@
         </div>
         <div class="header-input">
             <i class="iconfont">&#xe632;</i>输入城市/景点/游玩主题</div>
-        <router-link to="/city" tag="div" class="header-right">{{this.city}}
+        <router-link to="/city" tag="div" class="header-right">{{this.$store.state.city}}
             <i class="iconfont arrow-down-icon">&#xe623;</i>
         </router-link>
     </div>

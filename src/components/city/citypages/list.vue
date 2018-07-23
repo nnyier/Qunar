@@ -2,6 +2,15 @@
     <div class="list" ref="wrapper">
         <div>
             <div class="area">
+                <!-- <div class="title">搜索</div> -->
+                <!-- <city-search></city-search> -->
+                <!-- <div class="button-list">
+                    <div class="button-wrapper">
+                        <div class="button active">上海</div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="area">
                 <div class="title border-topbottom">当前城市</div>
                 <div class="button-list">
                     <div class="button-wrapper">
@@ -29,6 +38,7 @@
 
 <script>
 import BScroll from "better-scroll";
+// import CitySearch from "./search";
 export default {
   name: "CityList",
   props: {
@@ -46,10 +56,13 @@ export default {
       if (this.letter) {
         const element = this.$refs[this.letter][0];
         // console.log(element);
-        this.scroll.scrollToElement(element)
+        this.scroll.scrollToElement(element);
       }
-    //   console.log(this.letter);
+      //   console.log(this.letter);
     }
+  },
+  components: {
+    // CitySearch
   }
 };
 </script>
@@ -77,7 +90,7 @@ export default {
 
 .list {
     position: absolute;
-    top: 1.28rem;
+    top: 1.9rem;
     left: 0;
     right: 0;
     bottom: 0;

@@ -1,6 +1,7 @@
 <template>
   <div class="inhome">
     <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
+    <city-search :cities="cities"></city-search>
     <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
   </div>
 </template>
@@ -8,6 +9,7 @@
 <script>
 import axios from "axios";
 import CityList from "./list";
+import CitySearch from "../citypages/search";
 import CityAlphabet from "./alphabet";
 export default {
   name: "CityInhome",
@@ -40,6 +42,7 @@ export default {
   },
   components: {
     CityList,
+    CitySearch,
     CityAlphabet
   }
 };

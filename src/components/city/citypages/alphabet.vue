@@ -55,7 +55,7 @@ export default {
           //   移动的位置距离页面顶部的距离
           const touchesY = e.touches[0].clientY;
           //  移动的位置距离列表顶部的距离
-          const touchY = touchesY - 64;
+          const touchY = touchesY - 95;
           // 移动的位移
           const offset = touchY - this.startY;
           // 每一个字母的距离 行高20px
@@ -81,7 +81,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top: 1.28rem;
+    top: 1.58rem;
     right: 0;
     bottom: 0;
     width: 0.4rem;

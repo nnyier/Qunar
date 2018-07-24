@@ -16,23 +16,39 @@ import HomeIcons from "./homepages/icons";
 import HomeRecommend from "./homepages/recommend";
 import HomeWeekend from "./homepages/weekend";
 import axios from "axios";
+import { mapState } from "vuex";
+
 export default {
   name: "Home",
   data() {
     return {
-      // city: "",
+      lastCity: "",
       swiperList: [],
       iconList: [],
       recommendList: [],
       weekendList: []
     };
   },
+  computed: {
+    ...mapState(["city"])
+  },
   mounted() {
+    this.lastCity = this.city;
     this.getHomeInfo();
+  },
+  // keepalive的生命周期钩子
+  // 页面首次加载会执行mounted钩子和activated钩子，页面切换时只会执行activated钩子
+  activated() {
+    // 城市名称改变时，重新发送ajax请求，这样keepalive的内容也可以更改了
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city;
+      this.getHomeInfo();
+    }
+    console.log("activated");
   },
   methods: {
     getHomeInfo() {
-      axios.get("/api/index.json").then(this.getHomeSucc);
+      axios.get("/api/index.json?city=" + this.city).then(this.getHomeSucc);
     },
     getHomeSucc(res) {
       res = res.data;

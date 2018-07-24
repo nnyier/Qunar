@@ -2,7 +2,7 @@
     <div class="recommend">
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recolist" :key="item.id">
+            <router-link tag="li" class="item border-bottom" v-for="item of recolist" :key="item.id" :to="'/detail/' + item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src="item.imgUrl" alt="">
                 </div>
@@ -13,7 +13,7 @@
                         <span class="item-color">￥</span>
                         <strong class="item-color">{{item.price}}</strong>起</p>
                 </div>
-            </li>
+            </router-link>
         </ul>
         <a class="more" href="#">查看所有产品</a>
     </div>

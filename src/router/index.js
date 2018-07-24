@@ -4,6 +4,7 @@ import Home from '@/components/home/home'
 import City from '../components/city/city'
 import InHome from '../components/city/citypages/inhome'
 import OutHome from '../components/city/citypages/outhome'
+import Detail from '../components/detail/detail'
 
 Vue.use(Router)
 
@@ -26,5 +27,8 @@ export default new Router({
       path: 'outhome',
       component: OutHome
     }]
+  }, {
+    path: '/detail/:id',
+    component: Detail
   }]
 })

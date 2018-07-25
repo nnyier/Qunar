@@ -44,7 +44,7 @@ export default {
       this.lastCity = this.city;
       this.getHomeInfo();
     }
-    console.log("activated");
+    // console.log("activated");
   },
   methods: {
     getHomeInfo() {

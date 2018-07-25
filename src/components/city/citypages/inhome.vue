@@ -37,7 +37,7 @@ export default {
     },
     handleLetterChange(letter) {
       this.letter = letter;
-      console.log(letter);
+      // console.log(letter);
     }
   },
   components: {

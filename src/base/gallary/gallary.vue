@@ -62,6 +62,7 @@ export default {
     bottom: 0;
     right: 0;
     background: #000;
+    z-index: 3;
 
     .wrapper {
         // overflow: hidden;

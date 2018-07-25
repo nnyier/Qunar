@@ -30,5 +30,9 @@ export default new Router({
   }, {
     path: '/detail/:id',
     component: Detail
-  }]
+  }],
+  // 每次切换路由，都让页面滚动到顶部
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })

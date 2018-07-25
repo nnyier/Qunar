@@ -2,7 +2,8 @@
     <div class="detail-list">
         <div class="item" v-for="item in list" :key="item.id">
             <div class="item-title">
-                <span class="item-title-icon"></span>{{item.title}}
+                <span class="item-title-icon"></span>
+                {{item.title}}
             </div>
             <!-- 递归组件  二级循环 -->
             <div class="item-children" v-if="item.children">
@@ -26,6 +27,7 @@ export default {
     .item {
         position: relative;
 
+        // margin: 0.2rem 0;
         .item-title {
             overflow: hidden;
             position: relative;
@@ -35,7 +37,7 @@ export default {
             height: 0.88rem;
             background: #fff;
             color: #333;
-            font-size: 0.32rem;
+            // font-size: 0.32rem;
             line-height: 0.88rem;
             text-indent: 0.4rem;
 
@@ -53,7 +55,14 @@ export default {
         }
 
         .item-children {
-            padding: 0 0.3rem;
+            width: 100%;
+            text-indent: 0.6rem;
+            color: #333;
+            line-height: 0.48rem;
+
+            .item-title-icon {
+                font-size: 12px;
+            }
         }
     }
 }

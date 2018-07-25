@@ -24,7 +24,12 @@ export default {
     };
   },
   activated() {
+    //   全局对象绑定的事件
     window.addEventListener("scroll", this.handleScroll);
+  },
+  deactivated() {
+    //   解除全局对象绑定的事件
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     handleScroll() {

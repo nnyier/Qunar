@@ -68,7 +68,7 @@ export default {
         // overflow: hidden;
         height: 0;
         width: 100%;
-        padding-bottom: 55%;
+        padding-bottom: 100%;
         background: #fff;
 
         .swiper-pagination {

@@ -9,7 +9,9 @@
                 </div>
             </div>
         </div>
-        <common-gallary @close="handleGallaryClose" v-show="showGallary" :imgs="bannerImgs"></common-gallary>
+        <transition name="fade">
+            <common-gallary @close="handleGallaryClose" v-show="showGallary" :imgs="bannerImgs"></common-gallary>
+        </transition>
     </div>
 </template>
 
@@ -43,6 +45,14 @@ export default {
 
 <style lang="stylus" scoped>
 .detail-banner {
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.5s;
+    }
+
     .banner {
         overflow: hidden;
         width: 100%;

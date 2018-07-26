@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import store from './store'
+// 如果浏览器没有promise 会自动添加es6 新特性 解决部分浏览器白屏问题
+import 'babel-polyfill'
 import '../src/common/css/reset.css'
 // 解决移动端1px边框问题(多倍屏下，1px会被渲染为多px)
 import '../src/common/css/border.css'

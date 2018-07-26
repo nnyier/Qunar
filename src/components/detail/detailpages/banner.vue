@@ -5,7 +5,7 @@
             <div class="banner-info">
                 <div class="banner-title">{{this.bannerName}}</div>
                 <div class="banner-number">
-                    <i class="iconfont banner-icon">&#xe6f5;</i>{{this.bannerName}}
+                    <i class="iconfont banner-icon">&#xe6f5;</i>{{this.bannerImgs.length}}
                 </div>
             </div>
         </div>

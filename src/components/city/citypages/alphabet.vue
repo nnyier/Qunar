@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <ul class="list">
-            <li class="item" v-for="item of letters" :ref="item" :key="item.id" @click="handleLetterClick" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">{{item}}</li>
-        </ul>
-    </div>
+  <div>
+    <ul class="list">
+      <li class="item" v-for="item of letters" :ref="item" :key="item.id" @click="handleLetterClick" @touchstart.prevent="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">{{item}}</li>
+    </ul>
+  </div>
 
 </template>
 
@@ -77,21 +77,21 @@ export default {
 @import '../../../common/css/variables.styl';
 
 .list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    top: 1.58rem;
-    right: 0;
-    bottom: 0;
-    width: 0.4rem;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 1.58rem;
+  right: 0;
+  bottom: 0;
+  width: 0.4rem;
+  text-align: center;
 
-    .item {
-        // 行高20px
-        line-height: 0.4rem;
-        text-align: center;
-        color: $bg-color;
-    }
+  .item {
+    // 行高20px
+    line-height: 0.4rem;
+    text-align: center;
+    color: $bg-color;
+  }
 }
 </style>

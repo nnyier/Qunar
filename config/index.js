@@ -59,6 +59,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+    // 打包生成的文件，在后端运行的文件夹
     assetsPublicPath: '/',
 
     /**
